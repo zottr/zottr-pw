@@ -1,20 +1,23 @@
-import React, { FC, ReactNode } from 'react'
-import Box from '@mui/material/Box'
-import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
+import React, { FC, ReactNode } from 'react';
+import Box from '@mui/material/Box';
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 const MainLayout: FC<Props> = ({ children }) => {
   return (
-    <Box component="main" sx={{ width: '100%', overflowX: 'hidden', backgroundColor: 'background.paper' }}>
+    <Box
+      component="main"
+      sx={{ width: '100%', backgroundColor: 'background.paper' }}
+    >
       <Header />
       {children}
       <Footer />
     </Box>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
