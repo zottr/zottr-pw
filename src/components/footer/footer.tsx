@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
-import { FooterNavigation, FooterDescription } from '@/components/footer'
-import { Stack } from '@mui/material'
-import { useMediaQuery, useTheme } from '@mui/material'
+import React, { FC } from 'react';
+import { FooterNavigation, FooterDescription } from '@/components/footer';
+import { Stack } from '@mui/material';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const Footer: FC = () => {
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Stack
@@ -26,7 +26,7 @@ const Footer: FC = () => {
       <FooterNavigation />
       {isMobile && <FooterDescription />}
     </Stack>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
