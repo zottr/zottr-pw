@@ -8,7 +8,7 @@ const headingLineHeight = 1.4;
 
 const typography: TypographyOptions = {
   fontFamily: 'Poppins, sans-serif',
-  fontSize: 14,
+  fontSize: 16,
   htmlFontSize: 16, // enforce consistent base
   fontWeightLight: 400,
   fontWeightRegular: 400,
