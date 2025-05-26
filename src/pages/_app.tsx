@@ -29,7 +29,7 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Zottr</title>
       </Head>
       <MUIProvider>

@@ -11,7 +11,11 @@ const MainLayout: FC<Props> = ({ children }) => {
   return (
     <Box
       component="main"
-      sx={{ width: '100%', backgroundColor: 'background.paper' }}
+      sx={{
+        width: '100%',
+        overflowX: 'hidden',
+        backgroundColor: 'background.paper',
+      }}
     >
       <Header />
       {children}
