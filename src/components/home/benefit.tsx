@@ -112,7 +112,7 @@ const HomeBenefit: FC = () => {
               color: 'grey.700',
               mb: 2,
               ml: { xs: 0, md: 4 },
-              fontSize: { xs: 16, md: 18 },
+              fontSize: { xs: 16, md: 20 },
               lineHeight: 1.4,
               // textAlign: 'end',
             }}

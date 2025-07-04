@@ -66,7 +66,7 @@ const HomeHero: FC = () => {
         sx={{
           backgroundColor: 'background.paper',
           position: 'relative',
-          pt: { xs: 4, md: 15 },
+          pt: { xs: 4, md: 12 },
           pb: { xs: 6, md: 10 },
           px: { xs: 2, md: 10 },
           width: '100%',
@@ -92,7 +92,7 @@ const HomeHero: FC = () => {
                   sx={{
                     textAlign: { xs: 'left', md: 'left' },
                     position: 'relative',
-                    fontSize: { xs: 32, md: 60 },
+                    fontSize: { xs: 32, md: 64 },
                     letterSpacing: 1.5,
                     fontWeight: 500,
                     lineHeight: 1.2,
@@ -136,7 +136,7 @@ const HomeHero: FC = () => {
                   sx={{
                     color: 'grey.700',
                     lineHeight: 1.4,
-                    fontSize: { xs: 16, md: 18 },
+                    fontSize: { xs: 16, md: 20 },
                     textAlign: { xs: 'left', md: 'left' },
                   }}
                 >

@@ -1,14 +1,21 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import InputBase from '@mui/material/InputBase'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import { StyledButton } from '../styled-button'
-import { Stack } from '@mui/material'
+import React, { FC } from 'react';
+import Box from '@mui/material/Box';
+import InputBase from '@mui/material/InputBase';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { StyledButton } from '../styled-button';
+import { Stack } from '@mui/material';
 
 const HomeNewsLetter: FC = () => {
   return (
-    <Box id="Connect" sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 }, mt: { xs: -13, md: -15 } }}>
+    <Box
+      id="Connect"
+      sx={{
+        backgroundColor: 'background.paper',
+        py: { xs: 8, md: 10 },
+        mt: { xs: -13, md: -15 },
+      }}
+    >
       <Stack
         gap={2}
         sx={{
@@ -38,7 +45,7 @@ const HomeNewsLetter: FC = () => {
             color: 'grey.700',
             lineHeight: 1.4,
             fontWeight: 400,
-            fontSize: { xs: 18, md: 24 },
+            fontSize: { xs: 18, md: 20 },
             // fontStyle: 'italic',
             textAlign: { xs: 'left', md: 'left' },
           }}
@@ -50,7 +57,7 @@ const HomeNewsLetter: FC = () => {
               color: 'primary.main',
               lineHeight: 1.4,
               fontWeight: 700,
-              fontSize: { xs: 18, md: 24 },
+              fontSize: { xs: 18, md: 20 },
               // fontStyle: 'italic',
               textAlign: { xs: 'center', md: 'left' },
             }}
@@ -61,7 +68,7 @@ const HomeNewsLetter: FC = () => {
         </Typography>
       </Stack>
     </Box>
-  )
-}
+  );
+};
 
-export default HomeNewsLetter
+export default HomeNewsLetter;
