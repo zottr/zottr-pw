@@ -1,17 +1,19 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 // import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import { styled, useTheme } from '@mui/material/styles'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import CircularProgress from '@mui/material/CircularProgress'
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress'
-import { data } from './benefit.data'
-import { useMediaQuery } from '@mui/material'
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import { styled, useTheme } from '@mui/material/styles';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress, {
+  linearProgressClasses,
+} from '@mui/material/LinearProgress';
+import { data } from './benefit.data';
+import { useMediaQuery } from '@mui/material';
 
 interface LinearProgressProps {
-  order: number
+  order: number;
 }
 
 const BorderLinearProgress = styled(LinearProgress, {
@@ -34,13 +36,13 @@ const BorderLinearProgress = styled(LinearProgress, {
       backgroundColor: '#0063ff',
     }),
   },
-}))
+}));
 
 const HomeBenefit: FC = () => {
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const imageWidth = isMobile ? 340 : 650
-  const imageHeight = isMobile ? 340 : 650
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const imageWidth = isMobile ? 340 : 520;
+  const imageHeight = isMobile ? 340 : 520;
 
   return (
     <Box
@@ -56,8 +58,20 @@ const HomeBenefit: FC = () => {
       {/* <Container> */}
       <Grid container spacing={3}>
         <Grid item xs={12} md={5}>
-          <Box sx={{ position: 'relative', ml: { xs: 0, md: -10 }, width: '100%', height: '100%' }}>
-            <img src="/images/home-feature.svg" width={imageWidth} height={imageHeight} alt="Feature img" />
+          <Box
+            sx={{
+              position: 'relative',
+              ml: { xs: 0, md: -12 },
+              width: '100%',
+              height: '100%',
+            }}
+          >
+            <img
+              src="/images/home-feature.svg"
+              width={imageWidth}
+              height={imageHeight}
+              alt="Feature img"
+            />
           </Box>
         </Grid>
         <Grid item xs={12} md={7} sx={{}}>
@@ -65,7 +79,7 @@ const HomeBenefit: FC = () => {
             component="h2"
             sx={{
               position: 'relative',
-              fontSize: { xs: 32, md: 64 },
+              fontSize: { xs: 32, md: 52 },
               ml: { xs: 0, md: 4 },
               mt: { xs: -2, md: 13 },
               mb: { xs: 2, md: 5 },
@@ -98,16 +112,24 @@ const HomeBenefit: FC = () => {
               color: 'grey.700',
               mb: 2,
               ml: { xs: 0, md: 4 },
-              fontSize: { xs: 16, md: 22 },
+              fontSize: { xs: 16, md: 18 },
               lineHeight: 1.4,
               // textAlign: 'end',
             }}
           >
-            Why should big brands have all the fancy tools? Zottr brings the same power to your phone. Whether you sell
-            sarees, pickles, or home-made candles, you get :
+            Why should big brands have all the fancy tools? Zottr brings the
+            same power to your phone. Whether you sell sarees, pickles, or
+            home-made candles, you get :
           </Typography>
         </Grid>
-        <Grid item xs={12} container rowSpacing={3} columnSpacing={10} sx={{ mt: { xs: -4, md: -4 } }}>
+        <Grid
+          item
+          xs={12}
+          container
+          rowSpacing={3}
+          columnSpacing={10}
+          sx={{ mt: { xs: -4, md: -4 } }}
+        >
           {data.map(({ title, description, icon }, index) => (
             <Grid key={String(index)} item xs={12} md={6}>
               <Box
@@ -133,7 +155,7 @@ const HomeBenefit: FC = () => {
                     justifyContent: 'center',
                     color: 'primary.contrastText',
                     '& svg': {
-                      fontSize: { xs: 42, md: 64 },
+                      fontSize: { xs: 42, md: 52 },
                       color: 'black',
                     },
                   }}
@@ -141,11 +163,22 @@ const HomeBenefit: FC = () => {
                   {icon}
                 </Box>
                 <Box sx={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
-                  <Typography sx={{ fontSize: { xs: 18, md: 26 }, mb: 1, color: 'grey.900', fontWeight: 500 }}>
+                  <Typography
+                    sx={{
+                      fontSize: { xs: 18, md: 20 },
+                      mb: 1,
+                      color: 'grey.900',
+                      fontWeight: 500,
+                    }}
+                  >
                     {title}
                   </Typography>
                   <Typography
-                    sx={{ fontSize: { xs: 16, md: 22 }, lineHeight: 1.3, color: 'grey.700' }}
+                    sx={{
+                      fontSize: { xs: 16, md: 16 },
+                      lineHeight: 1.3,
+                      color: 'grey.700',
+                    }}
                     variant="subtitle1"
                   >
                     {description}
@@ -158,7 +191,7 @@ const HomeBenefit: FC = () => {
       </Grid>
       {/* </Container> */}
     </Box>
-  )
-}
+  );
+};
 
-export default HomeBenefit
+export default HomeBenefit;

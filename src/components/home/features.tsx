@@ -1,31 +1,34 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import Slider, { Settings } from 'react-slick'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import IconButton from '@mui/material/IconButton'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { useTheme, styled } from '@mui/material/styles'
-import IconArrowBack from '@mui/icons-material/ArrowBack'
-import IconArrowForward from '@mui/icons-material/ArrowForward'
-import FeatureCardItem2 from '@/components/feature/feature-card-item2'
-import { data } from './features.data'
-import { Grid } from '@mui/material'
+import React, { FC } from 'react';
+import Box from '@mui/material/Box';
+import Slider, { Settings } from 'react-slick';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme, styled } from '@mui/material/styles';
+import IconArrowBack from '@mui/icons-material/ArrowBack';
+import IconArrowForward from '@mui/icons-material/ArrowForward';
+import FeatureCardItem2 from '@/components/feature/feature-card-item2';
+import { data } from './features.data';
+import { Grid } from '@mui/material';
 
 interface SliderArrowArrow {
-  onClick?: () => void
-  type: 'next' | 'prev'
-  className?: 'string'
+  onClick?: () => void;
+  type: 'next' | 'prev';
+  className?: 'string';
 }
 
 const SliderArrow: FC<SliderArrowArrow> = (props) => {
-  const { onClick, type, className } = props
+  const { onClick, type, className } = props;
   return (
     <IconButton
       sx={{
         backgroundColor: 'background.paper',
         color: 'primary.main',
-        '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' },
+        '&:hover': {
+          backgroundColor: 'primary.main',
+          color: 'primary.contrastText',
+        },
         bottom: '-28px !important',
         left: 'unset !important',
         right: type === 'prev' ? '60px !important' : '0 !important',
@@ -37,10 +40,14 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
       onClick={onClick}
       className={className}
     >
-      {type === 'next' ? <IconArrowForward sx={{ fontSize: 22 }} /> : <IconArrowBack sx={{ fontSize: 22 }} />}
+      {type === 'next' ? (
+        <IconArrowForward sx={{ fontSize: 22 }} />
+      ) : (
+        <IconArrowBack sx={{ fontSize: 22 }} />
+      )}
     </IconButton>
-  )
-}
+  );
+};
 
 const StyledDots = styled('ul')(({ theme }) => ({
   '&.slick-dots': {
@@ -56,11 +63,11 @@ const StyledDots = styled('ul')(({ theme }) => ({
       },
     },
   },
-}))
+}));
 
 const HomeOurFeatures: FC = () => {
-  const { breakpoints } = useTheme()
-  const matchMobileView = useMediaQuery(breakpoints.down('md'))
+  const { breakpoints } = useTheme();
+  const matchMobileView = useMediaQuery(breakpoints.down('md'));
 
   const sliderConfig: Settings = {
     infinite: true,
@@ -73,9 +80,17 @@ const HomeOurFeatures: FC = () => {
     dots: true,
     appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
     customPaging: () => (
-      <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
+      <Box
+        sx={{
+          height: 8,
+          width: 30,
+          backgroundColor: 'divider',
+          display: 'inline-block',
+          borderRadius: 4,
+        }}
+      />
     ),
-  }
+  };
 
   return (
     <Box
@@ -90,7 +105,12 @@ const HomeOurFeatures: FC = () => {
       <Typography
         variant="h1"
         component="h2"
-        sx={{ fontSize: { xs: 32, md: 64 }, lineHeight: 1.2, fontWeight: 500, textAlign: { xs: 'left', md: 'center' } }}
+        sx={{
+          fontSize: { xs: 32, md: 52 },
+          lineHeight: 1.2,
+          fontWeight: 500,
+          textAlign: { xs: 'left', md: 'center' },
+        }}
       >
         Design It Your Way. Manage Easily.
         <br /> Sell Like{' '}
@@ -116,7 +136,7 @@ const HomeOurFeatures: FC = () => {
         ))}
       </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default HomeOurFeatures
+export default HomeOurFeatures;

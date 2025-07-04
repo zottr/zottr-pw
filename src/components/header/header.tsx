@@ -1,17 +1,17 @@
-import React, { FC, useState } from 'react'
-import Box from '@mui/material/Box'
-import IconButton from '@mui/material/IconButton'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { Navigation, AuthNavigation } from '@/components/navigation'
-import { useTheme } from '@mui/material/styles'
-import { Menu, Close } from '@mui/icons-material'
+import React, { FC, useState } from 'react';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Navigation, AuthNavigation } from '@/components/navigation';
+import { useTheme } from '@mui/material/styles';
+import { Menu, Close } from '@mui/icons-material';
 // import logo from '@/components/logo/zottr_logo_large.svg'
 // import Image from 'next/image'
 
 const Header: FC = () => {
-  const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
-  const { breakpoints } = useTheme()
-  const matchMobileView = useMediaQuery(breakpoints.down('md'))
+  const [visibleMenu, setVisibleMenu] = useState<boolean>(false);
+  const { breakpoints } = useTheme();
+  const matchMobileView = useMediaQuery(breakpoints.down('md'));
 
   return (
     <Box
@@ -44,11 +44,18 @@ const Header: FC = () => {
           <img
             src="/images/icons/zottr_logo_large.svg"
             alt="Logo"
-            height={matchMobileView ? 28 : 36}
+            height={matchMobileView ? 28 : 32}
             style={{ marginLeft: matchMobileView ? 0 : 20 }}
           />
         </Box>
-        <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' }, position: 'fixed', left: 0 }}>
+        <Box
+          sx={{
+            ml: 'auto',
+            display: { xs: 'inline-flex', md: 'none' },
+            position: 'fixed',
+            left: 0,
+          }}
+        >
           <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
             <Menu color="primary" sx={{ fontSize: 28 }} />
           </IconButton>
@@ -95,7 +102,7 @@ const Header: FC = () => {
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

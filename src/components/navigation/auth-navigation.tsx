@@ -1,23 +1,23 @@
-import React, { FC, useState } from 'react'
-import Box from '@mui/material/Box'
-import { StyledButton } from '@/components/styled-button'
-import { Button, Typography } from '@mui/material'
-import TrialDialog from '../home/trial-dialog'
+import React, { FC, useState } from 'react';
+import Box from '@mui/material/Box';
+import { StyledButton } from '@/components/styled-button';
+import { Button, Typography } from '@mui/material';
+import TrialDialog from '../home/trial-dialog';
 
 interface AuthNavigationProps {
-  onItemClick?: () => void
+  onItemClick?: () => void;
 }
 
 const AuthNavigation: FC<AuthNavigationProps> = ({ onItemClick }) => {
-  const [openDialog, setOpenDialog] = useState(false)
+  const [openDialog, setOpenDialog] = useState(false);
   // const handleDialogOpen = () => setOpenDialog(true)
 
   const handleDialogOpen = () => {
-    setOpenDialog(true)
-    if (onItemClick) onItemClick() // close drawer on mobile
-  }
+    setOpenDialog(true);
+    if (onItemClick) onItemClick(); // close drawer on mobile
+  };
 
-  const handleDialogClose = () => setOpenDialog(false)
+  const handleDialogClose = () => setOpenDialog(false);
 
   return (
     <>
@@ -39,7 +39,7 @@ const AuthNavigation: FC<AuthNavigationProps> = ({ onItemClick }) => {
         >
           <Typography
             sx={{
-              fontSize: { xs: '1.2rem', md: 20 },
+              fontSize: { xs: '1.2rem', md: 16 },
               fontWeight: 500,
               textTransform: 'none',
               color: 'white',
@@ -65,7 +65,7 @@ const AuthNavigation: FC<AuthNavigationProps> = ({ onItemClick }) => {
         >
           <Typography
             sx={{
-              fontSize: { xs: '1.2rem', md: 20 },
+              fontSize: { xs: '1.2rem', md: 16 },
               fontWeight: 500,
               textTransform: 'none',
               color: 'primary.main',
@@ -79,9 +79,12 @@ const AuthNavigation: FC<AuthNavigationProps> = ({ onItemClick }) => {
       </StyledButton>
       <StyledButton disableHoverEffect={true}>Sign Up</StyledButton> */}
       </Box>
-      <TrialDialog openDialog={openDialog} handleDialogClose={handleDialogClose} />
+      <TrialDialog
+        openDialog={openDialog}
+        handleDialogClose={handleDialogClose}
+      />
     </>
-  )
-}
+  );
+};
 
-export default AuthNavigation
+export default AuthNavigation;

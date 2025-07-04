@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import { Link as ScrollLink } from 'react-scroll'
-import { navigations } from './navigation.data'
+import React, { FC } from 'react';
+import Box from '@mui/material/Box';
+import { Link as ScrollLink } from 'react-scroll';
+import { navigations } from './navigation.data';
 
 interface NavigationProps {
-  onItemClick?: () => void
+  onItemClick?: () => void;
 }
 
 const Navigation: FC<NavigationProps> = ({ onItemClick }) => {
@@ -30,7 +30,7 @@ const Navigation: FC<NavigationProps> = ({ onItemClick }) => {
             justifyContent: 'center',
             px: { xs: 0, md: 3 },
             mb: { xs: 3, md: 0 },
-            fontSize: { xs: '1.2rem', md: 22 },
+            fontSize: { xs: '1.2rem', md: 18 },
             ...(destination === '/' && {
               color: 'primary.main',
             }),
@@ -62,7 +62,7 @@ const Navigation: FC<NavigationProps> = ({ onItemClick }) => {
         </Box>
       ))}
     </Box>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

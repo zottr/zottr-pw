@@ -1,21 +1,21 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState } from 'react';
 // import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import { Link as ScrollLink } from 'react-scroll'
-import { StyledButton } from '@/components/styled-button'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
-import { Button, Stack } from '@mui/material'
-import TrialDialog from '../home/trial-dialog'
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { Link as ScrollLink } from 'react-scroll';
+import { StyledButton } from '@/components/styled-button';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { Button, Stack } from '@mui/material';
+import TrialDialog from '../home/trial-dialog';
 
 interface Exp {
-  label: string
-  value: string
+  label: string;
+  value: string;
 }
 interface ExpItemProps {
-  item: Exp
+  item: Exp;
 }
 
 const exps: Array<Exp> = [
@@ -31,14 +31,19 @@ const exps: Array<Exp> = [
     label: 'Experience Features',
     value: '10+',
   },
-]
+];
 
 const ExpItem: FC<ExpItemProps> = ({ item }) => {
-  const { value, label } = item
+  const { value, label } = item;
   return (
     <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
       <Typography
-        sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
+        sx={{
+          color: 'secondary.main',
+          mb: { xs: 1, md: 2 },
+          fontSize: { xs: 34, md: 44 },
+          fontWeight: 'bold',
+        }}
       >
         {value}
       </Typography>
@@ -46,13 +51,13 @@ const ExpItem: FC<ExpItemProps> = ({ item }) => {
         {label}
       </Typography>
     </Box>
-  )
-}
+  );
+};
 
 const HomeHero: FC = () => {
-  const [openDialog, setOpenDialog] = useState(false)
-  const handleDialogOpen = () => setOpenDialog(true)
-  const handleDialogClose = () => setOpenDialog(false)
+  const [openDialog, setOpenDialog] = useState(false);
+  const handleDialogOpen = () => setOpenDialog(true);
+  const handleDialogClose = () => setOpenDialog(false);
 
   return (
     <>
@@ -67,7 +72,11 @@ const HomeHero: FC = () => {
           width: '100%',
         }}
       >
-        <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
+        <Grid
+          container
+          spacing={0}
+          sx={{ flexDirection: { xs: 'column', md: 'unset' } }}
+        >
           <Grid item xs={12} md={6}>
             <Box
               sx={{
@@ -83,7 +92,7 @@ const HomeHero: FC = () => {
                   sx={{
                     textAlign: { xs: 'left', md: 'left' },
                     position: 'relative',
-                    fontSize: { xs: 32, md: 76 },
+                    fontSize: { xs: 32, md: 60 },
                     letterSpacing: 1.5,
                     fontWeight: 500,
                     lineHeight: 1.2,
@@ -115,14 +124,19 @@ const HomeHero: FC = () => {
                   mt: { xs: -3, md: 0 },
                 }}
               >
-                <img src="/images/home-hero.svg" width={330} height={330} alt="Hero img" />
+                <img
+                  src="/images/home-hero.svg"
+                  width={330}
+                  height={330}
+                  alt="Hero img"
+                />
               </Box>
               <Box sx={{ mb: 3, mt: 2, width: { xs: '100%', md: '70%' } }}>
                 <Typography
                   sx={{
                     color: 'grey.700',
                     lineHeight: 1.4,
-                    fontSize: { xs: 16, md: 22 },
+                    fontSize: { xs: 16, md: 18 },
                     textAlign: { xs: 'left', md: 'left' },
                   }}
                 >
@@ -178,7 +192,7 @@ const HomeHero: FC = () => {
                     color: 'grey.700',
                     lineHeight: 1.4,
                     fontWeight: 500,
-                    fontSize: { xs: 18, md: 24 },
+                    fontSize: { xs: 18, md: 20 },
                     fontStyle: 'italic',
                     textAlign: { xs: 'left', md: 'left' },
                   }}
@@ -189,8 +203,8 @@ const HomeHero: FC = () => {
                   onClick={handleDialogOpen}
                   variant="contained"
                   sx={{
-                    height: { xs: '4rem', md: '4.6rem' },
-                    width: { xs: '100%', md: '40%' },
+                    height: { xs: '4rem', md: '3.6rem' },
+                    width: { xs: '100%', md: '35%' },
                     borderRadius: '50px',
                     bgcolor: 'secondary.light',
                     '&:hover, &:focus, &:active': {
@@ -200,7 +214,7 @@ const HomeHero: FC = () => {
                 >
                   <Typography
                     sx={{
-                      fontSize: { xs: '1.2rem', md: '1.5rem' },
+                      fontSize: { xs: '1.2rem', md: '1.2rem' },
                       fontWeight: 500,
                       textTransform: 'none',
                       color: 'grey.900',
@@ -222,14 +236,22 @@ const HomeHero: FC = () => {
                 display: { xs: 'none', md: 'block' },
               }}
             >
-              <img src="/images/home-hero.svg" width={650} height={650} alt="Hero img" />
+              <img
+                src="/images/home-hero.svg"
+                width={650}
+                height={650}
+                alt="Hero img"
+              />
             </Box>
           </Grid>
         </Grid>
       </Box>
-      <TrialDialog openDialog={openDialog} handleDialogClose={handleDialogClose} />
+      <TrialDialog
+        openDialog={openDialog}
+        handleDialogClose={handleDialogClose}
+      />
     </>
-  )
-}
+  );
+};
 
-export default HomeHero
+export default HomeHero;

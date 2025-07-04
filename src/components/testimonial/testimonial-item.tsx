@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 // import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import { Testimonial } from '@/interfaces/testimonial'
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { Testimonial } from '@/interfaces/testimonial';
 
 interface Props {
-  item: Testimonial
+  item: Testimonial;
 }
 
 const TestimonialItem: FC<Props> = ({ item }) => {
@@ -15,11 +15,23 @@ const TestimonialItem: FC<Props> = ({ item }) => {
         <Typography
           component="h2"
           variant="h4"
-          sx={{ mb: 4, fontSize: { xs: 24, md: 42 }, color: 'grey.900', fontWeight: 500 }}
+          sx={{
+            mb: 4,
+            fontSize: { xs: 24, md: 34 },
+            color: 'grey.900',
+            fontWeight: 500,
+          }}
         >
           {item.title}
         </Typography>
-        <Typography sx={{ mb: 4, color: 'grey.700', fontSize: { xs: 16, md: 22 }, fontStyle: 'italic' }}>
+        <Typography
+          sx={{
+            mb: 4,
+            color: 'grey.700',
+            fontSize: { xs: 16, md: 18 },
+            fontStyle: 'italic',
+          }}
+        >
           {item.content}
         </Typography>
       </Box>
@@ -49,18 +61,29 @@ const TestimonialItem: FC<Props> = ({ item }) => {
             },
           }}
         >
-          <img src={`/images/avatars/${item.user.photo}`} width={80} height={80} alt={item.user.name} />
+          <img
+            src={`/images/avatars/${item.user.photo}`}
+            width={80}
+            height={80}
+            alt={item.user.name}
+          />
         </Box>
         <Box>
-          <Typography variant="h6" sx={{ fontSize: { xs: 12, md: 18 }, color: 'grey.900' }}>
+          <Typography
+            variant="h6"
+            sx={{ fontSize: { xs: 12, md: 16 }, color: 'grey.900' }}
+          >
             {item.user.name}
           </Typography>
-          <Typography variant="subtitle1" sx={{ fontSize: { xs: 12, md: 15 }, color: 'text.secondary' }}>
+          <Typography
+            variant="subtitle1"
+            sx={{ fontSize: { xs: 12, md: 14 }, color: 'text.secondary' }}
+          >
             {item.user.description}
           </Typography>
         </Box>
       </Box>
     </Box>
-  )
-}
-export default TestimonialItem
+  );
+};
+export default TestimonialItem;

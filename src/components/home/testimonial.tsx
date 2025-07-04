@@ -1,33 +1,36 @@
-import React, { FC, useRef } from 'react'
+import React, { FC, useRef } from 'react';
 // import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Slider, { Settings } from 'react-slick'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import IconButton from '@mui/material/IconButton'
-import { styled } from '@mui/material/styles'
-import IconArrowBack from '@mui/icons-material/ArrowBack'
-import IconArrowForward from '@mui/icons-material/ArrowForward'
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Slider, { Settings } from 'react-slick';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import { styled } from '@mui/material/styles';
+import IconArrowBack from '@mui/icons-material/ArrowBack';
+import IconArrowForward from '@mui/icons-material/ArrowForward';
 
-import { TestimonialItem } from '@/components/testimonial'
-import { data } from './testimonial.data'
-import { Stack, useMediaQuery, useTheme } from '@mui/material'
+import { TestimonialItem } from '@/components/testimonial';
+import { data } from './testimonial.data';
+import { Stack, useMediaQuery, useTheme } from '@mui/material';
 
 interface SliderArrowArrow {
-  onClick?: () => void
-  type: 'next' | 'prev'
-  className?: 'string'
+  onClick?: () => void;
+  type: 'next' | 'prev';
+  className?: 'string';
 }
 
 const SliderArrow: FC<SliderArrowArrow> = (props) => {
-  const { onClick, type, className } = props
+  const { onClick, type, className } = props;
   return (
     <IconButton
       sx={{
         backgroundColor: 'background.paper',
         color: 'primary.main',
-        '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' },
+        '&:hover': {
+          backgroundColor: 'primary.main',
+          color: 'primary.contrastText',
+        },
         bottom: { xs: '-28px !important', md: '64px !important' },
         left: 'unset !important',
         right: type === 'prev' ? '90px !important' : '30px !important',
@@ -39,23 +42,27 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
       onClick={onClick}
       className={className}
     >
-      {type === 'next' ? <IconArrowForward sx={{ fontSize: 22 }} /> : <IconArrowBack sx={{ fontSize: 22 }} />}
+      {type === 'next' ? (
+        <IconArrowForward sx={{ fontSize: 22 }} />
+      ) : (
+        <IconArrowBack sx={{ fontSize: 22 }} />
+      )}
     </IconButton>
-  )
-}
+  );
+};
 
 const StyledSlickContainer = styled('div')(() => ({
   position: 'relative',
 
   '& .slick-list': { marginLeft: '-30px', marginBottom: '24px' },
-}))
+}));
 
 const HomeTestimonial: FC = () => {
-  const sliderRef = useRef(null)
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const imageWidth = isMobile ? 400 : 750
-  const imageHeight = isMobile ? 400 : 750
+  const sliderRef = useRef(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const imageWidth = isMobile ? 400 : 750;
+  const imageHeight = isMobile ? 400 : 750;
 
   const StyledDots = styled('ul')(({ theme }) => ({
     '&.slick-dots': {
@@ -74,7 +81,7 @@ const HomeTestimonial: FC = () => {
         },
       },
     },
-  }))
+  }));
 
   const sliderConfig: Settings = {
     infinite: true,
@@ -89,9 +96,17 @@ const HomeTestimonial: FC = () => {
     arrows: false,
     appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
     customPaging: () => (
-      <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
+      <Box
+        sx={{
+          height: 8,
+          width: 30,
+          backgroundColor: 'divider',
+          display: 'inline-block',
+          borderRadius: 4,
+        }}
+      />
     ),
-  }
+  };
 
   return (
     <Box
@@ -107,7 +122,12 @@ const HomeTestimonial: FC = () => {
       <Grid container spacing={5}>
         <Grid item xs={12} md={6} sx={{ display: { xs: 'block', md: 'none' } }}>
           <Box sx={{ width: '100%', height: '100%', mt: -12, ml: -4 }}>
-            <img src="/images/home-testimonial.svg" width={imageWidth} height={imageHeight} alt="Testimonial img" />
+            <img
+              src="/images/home-testimonial.svg"
+              width={imageWidth}
+              height={imageHeight}
+              alt="Testimonial img"
+            />
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -116,7 +136,7 @@ const HomeTestimonial: FC = () => {
               component="h2"
               sx={{
                 position: 'relative',
-                fontSize: { xs: 32, md: 64 },
+                fontSize: { xs: 32, md: 52 },
                 mt: { xs: -7, md: 0 },
                 mb: { xs: -1, md: 4 },
                 lineHeight: 1.2,
@@ -150,12 +170,17 @@ const HomeTestimonial: FC = () => {
         </Grid>
         <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
           <Box sx={{ width: '120%', height: '120%', mt: -22 }}>
-            <img src="/images/home-testimonial.svg" width={imageWidth} height={imageHeight} alt="Testimonial img" />
+            <img
+              src="/images/home-testimonial.svg"
+              width={imageWidth}
+              height={imageHeight}
+              alt="Testimonial img"
+            />
           </Box>
         </Grid>
       </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default HomeTestimonial
+export default HomeTestimonial;
