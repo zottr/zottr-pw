@@ -5,6 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Navigation, AuthNavigation } from '@/components/navigation';
 import { useTheme } from '@mui/material/styles';
 import { Menu, Close } from '@mui/icons-material';
+import Link from 'next/link';
 // import logo from '@/components/logo/zottr_logo_large.svg'
 // import Image from 'next/image'
 
@@ -34,20 +35,23 @@ const Header: FC = () => {
           px: matchMobileView ? 2 : 0, // no horizontal padding on desktop
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'flex-start',
-            justifyContent: 'flex-start',
-          }}
-        >
-          <img
-            src="/images/icons/zottr_logo_large.svg"
-            alt="Logo"
-            height={matchMobileView ? 28 : 32}
-            style={{ marginLeft: matchMobileView ? 0 : 20 }}
-          />
-        </Box>
+        <Link href="/" passHref>
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start',
+              cursor: 'pointer',
+            }}
+          >
+            <img
+              src="/images/icons/zottr_logo_large.svg"
+              alt="Logo"
+              height={matchMobileView ? 28 : 32}
+              style={{ marginLeft: matchMobileView ? 0 : 20 }}
+            />
+          </Box>
+        </Link>
         <Box
           sx={{
             ml: 'auto',

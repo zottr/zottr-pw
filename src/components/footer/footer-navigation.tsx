@@ -10,10 +10,15 @@ import { Stack } from '@mui/material';
 const pageMenu = headerNavigations;
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Contact Us', path: '#' },
-  { label: 'Privacy Policy', path: '#' },
-  { label: 'Terms & Conditions', path: '#' },
-  { label: 'FAQ', path: '#' },
+  { label: 'Pricing', path: '/pricing' },
+  { label: 'About Us', path: '/about-us' },
+  { label: 'Contact Us', path: '/contact-us' },
+  { label: 'Privacy Policy', path: '/privacy-policy' },
+  { label: 'Terms & Conditions', path: '/terms-and-conditions' },
+  {
+    label: 'Cancellation & Refund Policy',
+    path: '/cancellation-refund-policy',
+  },
 ];
 
 interface NavigationItemProps {
@@ -23,7 +28,7 @@ interface NavigationItemProps {
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
   return (
-    <Link href={'#'} passHref>
+    <Link href={path} passHref>
       <MuiLink
         underline="hover"
         sx={{
@@ -46,7 +51,7 @@ const FooterNavigation: FC = () => {
       spacing={{ xs: 0, md: 2 }}
       sx={{ width: { xs: '100%', md: 1000 } }}
     >
-      <Grid item xs={6} md={6}>
+      {/* <Grid item xs={6} md={6}>
         <Stack
           sx={{
             display: 'flex',
@@ -59,7 +64,7 @@ const FooterNavigation: FC = () => {
             <NavigationItem key={index + path} label={label} path={path} />
           ))}
         </Stack>
-      </Grid>
+      </Grid> */}
       <Grid item xs={6} md={6}>
         <Stack
           sx={{
@@ -68,7 +73,7 @@ const FooterNavigation: FC = () => {
             justifyContent: 'center',
           }}
         >
-          <FooterSectionTitle title="About" />
+          <FooterSectionTitle title="Links" />
           {companyMenu.map(({ label, path }, index) => (
             <NavigationItem key={index + path} label={label} path={path} />
           ))}

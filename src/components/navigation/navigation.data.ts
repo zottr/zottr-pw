@@ -1,4 +1,4 @@
-import type { Navigation } from '@/interfaces/navigation'
+import type { Navigation } from '@/interfaces/navigation';
 
 export const navigations: Navigation[] = [
   {
@@ -17,4 +17,4 @@ export const navigations: Navigation[] = [
     label: 'Connect',
     path: 'Connect', // '/popular-course',
   },
-]
+];

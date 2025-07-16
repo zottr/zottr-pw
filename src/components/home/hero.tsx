@@ -1,12 +1,8 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 // import Image from 'next/image'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { Link as ScrollLink } from 'react-scroll';
-import { StyledButton } from '@/components/styled-button';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Button, Stack } from '@mui/material';
 import TrialDialog from '../home/trial-dialog';
 
