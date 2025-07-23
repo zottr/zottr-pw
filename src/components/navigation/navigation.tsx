@@ -35,7 +35,7 @@ const Navigation: FC<NavigationProps> = ({ onItemClick }) => {
           key={id}
           component="a"
           href={`/#${id}`}
-          onClick={(e) => handleClick(e, id)}
+          onClick={(e: any) => handleClick(e, id)}
           sx={{
             position: 'relative',
             color: 'primary.main',
