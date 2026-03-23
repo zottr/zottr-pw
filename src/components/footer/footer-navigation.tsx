@@ -3,11 +3,8 @@ import Link from 'next/link';
 import Grid from '@mui/material/Grid';
 import MuiLink from '@mui/material/Link';
 import type { Navigation } from '@/interfaces/navigation';
-import { navigations as headerNavigations } from '@/components/navigation/navigation.data';
 import { FooterSectionTitle } from '@/components/footer';
 import { Stack } from '@mui/material';
-
-const pageMenu = headerNavigations;
 
 const companyMenu: Array<Navigation> = [
   { label: 'Pricing', path: '/pricing' },
@@ -65,12 +62,13 @@ const FooterNavigation: FC = () => {
           ))}
         </Stack>
       </Grid> */}
-      <Grid item xs={6} md={6}>
+      <Grid item xs={12} md={6}>
         <Stack
           sx={{
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            alignItems: { xs: 'flex-start', md: 'center' },
+            justifyContent: { xs: 'flex-start', md: 'center' },
+            px: { xs: 2 },
           }}
         >
           <FooterSectionTitle title="Links" />
