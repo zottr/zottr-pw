@@ -9,13 +9,17 @@ const DynamicHomeBenefit = dynamic(() => import('../components/home/benefit'));
 const DynamicFinalCTA = dynamic(() => import('../components/home/finalcta'));
 // const DynamicHomePopularCourse = dynamic(() => import('../components/home/popular-courses'))
 const DynamicHomeTestimonial = dynamic(
-  () => import('../components/home/testimonial')
+  () => import('../components/home/testimonial'),
 );
 const DynamicHomeFeatures = dynamic(
-  () => import('../components/home/features')
+  () => import('../components/home/features'),
 );
+const DynamicHomeMobileFirst = dynamic(
+  () => import('../components/home/mobile-first'),
+);
+const DynamicHomePricing = dynamic(() => import('../components/home/pricing'));
 const DynamicHomeNewsLetter = dynamic(
-  () => import('../components/home/newsletter')
+  () => import('../components/home/newsletter'),
 );
 
 const Home = () => {
@@ -41,6 +45,9 @@ const Home = () => {
       <section id="features">
         <DynamicHomeFeatures />
       </section>
+      <section id="mobile-first">
+        <DynamicHomeMobileFirst />
+      </section>
       <section id="stories">
         <DynamicHomeTestimonial />
       </section>
@@ -49,6 +56,9 @@ const Home = () => {
       </section>
       <section id="cta">
         <DynamicFinalCTA />
+      </section>
+      <section id="pricing">
+        <DynamicHomePricing />
       </section>
       <section id="newsletter">
         <DynamicHomeNewsLetter />

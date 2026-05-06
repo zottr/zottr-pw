@@ -61,7 +61,7 @@ const Header: FC = () => {
           }}
         >
           <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
-            <Menu color="primary" sx={{ fontSize: 28 }} />
+            <Menu color="primary" sx={{ fontSize: 32 }} />
           </IconButton>
         </Box>
 
@@ -90,12 +90,12 @@ const Header: FC = () => {
               sx={{
                 position: 'fixed',
                 top: 10,
-                left: 14,
+                right: 14,
               }}
               onClick={() => setVisibleMenu(!visibleMenu)}
             >
               {/* <Close fontSize="large" color="error" /> */}
-              <Close color="primary" sx={{ fontSize: 28 }} />
+              <Close color="primary" sx={{ fontSize: 32 }} />
             </IconButton>
           )}
           <Box />

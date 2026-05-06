@@ -163,7 +163,7 @@ const HomeFinalCTA: FC = () => {
                   mt: { xs: 0, md: 4 },
                 }}
               >
-                <Typography
+                {/* <Typography
                   sx={{
                     color: 'grey.700',
                     lineHeight: 1.4,
@@ -174,8 +174,8 @@ const HomeFinalCTA: FC = () => {
                   }}
                 >
                   {'Ready to start your journey with Zottr?'}
-                </Typography>
-                <Button
+                </Typography> */}
+                {/* <Button
                   onClick={handleDialogOpen}
                   variant="contained"
                   sx={{
@@ -198,7 +198,7 @@ const HomeFinalCTA: FC = () => {
                   >
                     Create My Account
                   </Typography>
-                </Button>
+                </Button> */}
               </Stack>
             </Box>
           </Grid>

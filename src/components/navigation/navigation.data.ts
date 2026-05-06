@@ -17,4 +17,8 @@ export const navigations: Navigation[] = [
     label: 'Connect',
     path: 'Connect', // '/popular-course',
   },
+  {
+    label: 'Pricing',
+    path: 'Pricing', // '/pricing',
+  },
 ];

@@ -193,9 +193,9 @@ const HomeHero: FC = () => {
                     textAlign: { xs: 'left', md: 'left' },
                   }}
                 >
-                  {'Try Zottr Now – It’s Free!'}
+                  {'Get Started – It’s Free!'}
                 </Typography>
-                <Button
+                {/* <Button
                   onClick={handleDialogOpen}
                   variant="contained"
                   sx={{
@@ -217,6 +217,30 @@ const HomeHero: FC = () => {
                     }}
                   >
                     Start My Trial
+                  </Typography>
+                </Button> */}
+                <Button
+                  onClick={handleDialogOpen}
+                  variant="contained"
+                  sx={{
+                    height: { xs: '4rem', md: '3.6rem' },
+                    width: { xs: '100%', md: '35%' },
+                    borderRadius: '50px',
+                    // bgcolor: 'secondary.light',
+                    // '&:hover, &:focus, &:active': {
+                    //   bgcolor: 'secondary.main',
+                    // },
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: { xs: 22, md: 22 },
+                      // fontWeight: 500,
+                      textTransform: 'none',
+                      // color: 'grey.900',
+                    }}
+                  >
+                    Try Zottr
                   </Typography>
                 </Button>
               </Stack>

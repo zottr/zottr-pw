@@ -2,25 +2,33 @@
   "index.tsx -> ../components/home/benefit": {
     "id": 1007,
     "files": [
-      "static/chunks/7.34437910bbea5528.js"
+      "static/chunks/7.ade5fb77c93b6afe.js"
     ]
   },
   "index.tsx -> ../components/home/features": {
     "id": 6029,
     "files": [
-      "static/chunks/29.7d8c494d9fdcd549.js"
+      "static/chunks/29.f272ed25a2798e56.js"
     ]
   },
   "index.tsx -> ../components/home/finalcta": {
     "id": 4557,
     "files": [
-      "static/chunks/557.bfca977edf41b4b7.js"
+      "static/chunks/999.215f85d87621ef49.js",
+      "static/chunks/557.36f94642858e4742.js"
     ]
   },
   "index.tsx -> ../components/home/hero": {
     "id": 8470,
     "files": [
-      "static/chunks/470.a44a54e616cebab4.js"
+      "static/chunks/999.215f85d87621ef49.js",
+      "static/chunks/470.51edac9b0ccefc9f.js"
+    ]
+  },
+  "index.tsx -> ../components/home/mobile-first": {
+    "id": 3649,
+    "files": [
+      "static/chunks/649.030fe77991735645.js"
     ]
   },
   "index.tsx -> ../components/home/newsletter": {
@@ -29,10 +37,17 @@
       "static/chunks/923.c7ec4725e332aa92.js"
     ]
   },
+  "index.tsx -> ../components/home/pricing": {
+    "id": 6032,
+    "files": [
+      "static/chunks/919-50ac4edbd888f527.js",
+      "static/chunks/32.f70d15318f3a65bb.js"
+    ]
+  },
   "index.tsx -> ../components/home/testimonial": {
     "id": 4521,
     "files": [
-      "static/chunks/453.766711c8749f5ae5.js",
+      "static/chunks/453.688ecc9f04f79069.js",
       "static/chunks/521.8acb1facb17f2d90.js"
     ]
   }
