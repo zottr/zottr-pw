@@ -1,54 +1,50 @@
 {
   "index.tsx -> ../components/home/benefit": {
-    "id": 1007,
+    "id": "index.tsx -> ../components/home/benefit",
     "files": [
-      "static/chunks/7.ade5fb77c93b6afe.js"
+      "static/chunks/src_components_home_benefit_tsx.js"
     ]
   },
   "index.tsx -> ../components/home/features": {
-    "id": 6029,
+    "id": "index.tsx -> ../components/home/features",
     "files": [
-      "static/chunks/29.f272ed25a2798e56.js"
+      "static/chunks/src_components_home_features_tsx.js"
     ]
   },
   "index.tsx -> ../components/home/finalcta": {
-    "id": 4557,
+    "id": "index.tsx -> ../components/home/finalcta",
     "files": [
-      "static/chunks/999.215f85d87621ef49.js",
-      "static/chunks/557.36f94642858e4742.js"
+      "static/chunks/src_components_home_finalcta_tsx.js"
     ]
   },
   "index.tsx -> ../components/home/hero": {
-    "id": 8470,
+    "id": "index.tsx -> ../components/home/hero",
     "files": [
-      "static/chunks/999.215f85d87621ef49.js",
-      "static/chunks/470.51edac9b0ccefc9f.js"
+      "static/chunks/src_components_home_hero_tsx.js"
     ]
   },
   "index.tsx -> ../components/home/mobile-first": {
-    "id": 3649,
+    "id": "index.tsx -> ../components/home/mobile-first",
     "files": [
-      "static/chunks/649.030fe77991735645.js"
+      "static/chunks/src_components_home_mobile-first_tsx.js"
     ]
   },
   "index.tsx -> ../components/home/newsletter": {
-    "id": 9923,
+    "id": "index.tsx -> ../components/home/newsletter",
     "files": [
-      "static/chunks/923.c7ec4725e332aa92.js"
+      "static/chunks/src_components_home_newsletter_tsx.js"
     ]
   },
   "index.tsx -> ../components/home/pricing": {
-    "id": 6032,
+    "id": "index.tsx -> ../components/home/pricing",
     "files": [
-      "static/chunks/919-50ac4edbd888f527.js",
-      "static/chunks/32.f70d15318f3a65bb.js"
+      "static/chunks/src_components_home_pricing_tsx.js"
     ]
   },
   "index.tsx -> ../components/home/testimonial": {
-    "id": 4521,
+    "id": "index.tsx -> ../components/home/testimonial",
     "files": [
-      "static/chunks/453.688ecc9f04f79069.js",
-      "static/chunks/521.8acb1facb17f2d90.js"
+      "static/chunks/src_components_home_testimonial_tsx.js"
     ]
   }
 }

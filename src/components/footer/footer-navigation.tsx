@@ -10,11 +10,12 @@ import { Stack } from '@mui/material';
 const pageMenu = headerNavigations;
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Pricing', path: '/pricing' },
+  // { label: 'Pricing', path: '/pricing' },
   { label: 'About Us', path: '/about-us' },
   { label: 'Contact Us', path: '/contact-us' },
   { label: 'Privacy Policy', path: '/privacy-policy' },
   { label: 'Terms & Conditions', path: '/terms-and-conditions' },
+  { label: 'Shipping & Exchange', path: '/shipping-exchange' },
   {
     label: 'Cancellation & Refund Policy',
     path: '/cancellation-refund-policy',
