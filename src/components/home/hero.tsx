@@ -1,10 +1,9 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 // import Image from 'next/image'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Button, Stack } from '@mui/material';
-import TrialDialog from '../home/trial-dialog';
 
 interface Exp {
   label: string;
@@ -29,6 +28,8 @@ const exps: Array<Exp> = [
   },
 ];
 
+const SELLER_SIGNUP_URL = 'https://seller.zottr.com/signup';
+
 const ExpItem: FC<ExpItemProps> = ({ item }) => {
   const { value, label } = item;
   return (
@@ -51,23 +52,18 @@ const ExpItem: FC<ExpItemProps> = ({ item }) => {
 };
 
 const HomeHero: FC = () => {
-  const [openDialog, setOpenDialog] = useState(false);
-  const handleDialogOpen = () => setOpenDialog(true);
-  const handleDialogClose = () => setOpenDialog(false);
-
   return (
-    <>
-      <Box
-        id="Hero"
-        sx={{
-          backgroundColor: 'background.paper',
-          position: 'relative',
-          pt: { xs: 4, md: 12 },
-          pb: { xs: 6, md: 10 },
-          px: { xs: 2, md: 10 },
-          width: '100%',
-        }}
-      >
+    <Box
+      id="Hero"
+      sx={{
+        backgroundColor: 'background.paper',
+        position: 'relative',
+        pt: { xs: 4, md: 12 },
+        pb: { xs: 6, md: 10 },
+        px: { xs: 2, md: 10 },
+        width: '100%',
+      }}
+    >
         <Grid
           container
           spacing={0}
@@ -220,7 +216,8 @@ const HomeHero: FC = () => {
                   </Typography>
                 </Button> */}
                 <Button
-                  onClick={handleDialogOpen}
+                  component="a"
+                  href={SELLER_SIGNUP_URL}
                   variant="contained"
                   sx={{
                     height: { xs: '4rem', md: '3.6rem' },
@@ -266,11 +263,6 @@ const HomeHero: FC = () => {
           </Grid>
         </Grid>
       </Box>
-      <TrialDialog
-        openDialog={openDialog}
-        handleDialogClose={handleDialogClose}
-      />
-    </>
   );
 };
 

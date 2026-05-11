@@ -78,8 +78,8 @@ const HomeMobileFirst: FC = () => {
       id="mobile-first"
       sx={{
         px: { xs: 2, md: 10 },
-        pt: { xs: 6, md: 8 },
-        pb: { xs: 6, md: 10 },
+        pt: { xs: 1, md: 2 },
+        pb: { xs: 1, md: 3 },
         backgroundColor: 'background.paper',
       }}
     >

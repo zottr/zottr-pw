@@ -17,6 +17,9 @@ const DynamicHomeFeatures = dynamic(
 const DynamicHomeMobileFirst = dynamic(
   () => import('../components/home/mobile-first'),
 );
+const DynamicHomeMetaGrowth = dynamic(
+  () => import('../components/home/meta-growth'),
+);
 const DynamicHomePricing = dynamic(() => import('../components/home/pricing'));
 const DynamicHomeNewsLetter = dynamic(
   () => import('../components/home/newsletter'),
@@ -44,6 +47,9 @@ const Home = () => {
       </section>
       <section id="features">
         <DynamicHomeFeatures />
+      </section>
+      <section id="meta-growth">
+        <DynamicHomeMetaGrowth />
       </section>
       <section id="mobile-first">
         <DynamicHomeMobileFirst />
