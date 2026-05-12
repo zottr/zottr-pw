@@ -20,6 +20,10 @@ const companyMenu: Array<Navigation> = [
     label: 'Cancellation & Refund Policy',
     path: '/cancellation-refund-policy',
   },
+  {
+    label: 'Data Deletion Policy',
+    path: '/data-deletion-policy',
+  },
 ];
 
 interface NavigationItemProps {
