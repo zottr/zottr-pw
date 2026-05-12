@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from '@mui/material';
 import { GlobalStyles } from '@mui/material';
+import Head from 'next/head';
 
 export default function PrivacyPolicy() {
   const ListItem = ({ children }: { children: React.ReactNode }) => (
@@ -15,42 +16,74 @@ export default function PrivacyPolicy() {
   );
 
   return (
-    <Container maxWidth="md" sx={{ my: 6, pt: 8 }}>
-      <GlobalStyles
-        styles={{
-          strong: {
-            color: 'grey.800',
-            fontWeight: 600, // or 400 or whatever you prefer
-          },
-        }}
-      />
-      <Box sx={{ textAlign: 'center', mb: 4 }}>
-        <Typography
-          component="h2"
-          sx={{
-            fontSize: { xs: 20, md: 40 },
-            lineHeight: 1.2,
-            fontWeight: 500,
-            color: 'grey.900',
+    <>
+      <Head>
+        <title>Privacy Policy | Zottr</title>
+        <meta
+          name="description"
+          content="Read the Zottr Privacy Policy to understand how we collect, use, and protect your information."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Privacy Policy | Zottr" />
+        <meta
+          property="og:description"
+          content="Read the Zottr Privacy Policy to understand how we collect, use, and protect your information."
+        />
+        <meta
+          property="og:url"
+          content="https://zottr.com/privacy-policy"
+        />
+        <meta
+          property="og:image"
+          content="https://zottr.com/images/home-feature.svg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy | Zottr" />
+        <meta
+          name="twitter:description"
+          content="Read the Zottr Privacy Policy to understand how we collect, use, and protect your information."
+        />
+        <meta
+          name="twitter:image"
+          content="https://zottr.com/images/home-feature.svg"
+        />
+      </Head>
+      <Container maxWidth="md" sx={{ my: 6, pt: 8 }}>
+        <GlobalStyles
+          styles={{
+            strong: {
+              color: 'grey.800',
+              fontWeight: 600, // or 400 or whatever you prefer
+            },
           }}
-          gutterBottom
+        />
+        <Box sx={{ textAlign: 'center', mb: 4 }}>
+          <Typography
+            component="h2"
+            sx={{
+              fontSize: { xs: 20, md: 40 },
+              lineHeight: 1.2,
+              fontWeight: 500,
+              color: 'grey.900',
+            }}
+            gutterBottom
+          >
+            Privacy Policy
+          </Typography>
+        </Box>
+        <Typography
+          sx={{
+            mb: 2,
+            color: 'grey.700',
+            fontSize: { xs: 14, md: 16 },
+          }}
+          paragraph
         >
-          Privacy Policy
+          This Privacy Policy describes Our policies and procedures on the
+          collection, use and disclosure of Your information when You use the
+          Service and tells You about Your privacy rights and how the law protects
+          You.
         </Typography>
-      </Box>
-      <Typography
-        sx={{
-          mb: 2,
-          color: 'grey.700',
-          fontSize: { xs: 14, md: 16 },
-        }}
-        paragraph
-      >
-        This Privacy Policy describes Our policies and procedures on the
-        collection, use and disclosure of Your information when You use the
-        Service and tells You about Your privacy rights and how the law protects
-        You.
-      </Typography>
       <Typography
         sx={{
           mb: 2,
@@ -1000,17 +1033,18 @@ export default function PrivacyPolicy() {
       >
         Contact Us
       </Typography>
-      <Typography
-        sx={{
-          mb: 2,
-          color: 'grey.700',
-          fontSize: { xs: 14, md: 16 },
-        }}
-        paragraph
-      >
-        If you have any questions about these Privacy Policy, please contact us
-        at hello@zottr.com.
-      </Typography>
-    </Container>
+        <Typography
+          sx={{
+            mb: 2,
+            color: 'grey.700',
+            fontSize: { xs: 14, md: 16 },
+          }}
+          paragraph
+        >
+          If you have any questions about these Privacy Policy, please contact us
+          at hello@zottr.com.
+        </Typography>
+      </Container>
+    </>
   );
 }
