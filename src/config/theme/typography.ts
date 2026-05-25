@@ -1,13 +1,13 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 
 export const fontFamily = [
-  '"Cabin",-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+  '"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
 ].join(',');
 
 const headingLineHeight = 1.4;
 
 const typography: TypographyOptions = {
-  fontFamily: 'Poppins, sans-serif',
+  fontFamily,
   // fontSize: 16,
   // htmlFontSize: 16, // enforce consistent base
   fontWeightLight: 400,

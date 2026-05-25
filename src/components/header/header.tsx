@@ -1,9 +1,7 @@
 import React, { FC, useState } from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { Navigation, AuthNavigation } from '@/components/navigation';
-import { useTheme } from '@mui/material/styles';
 import { Menu, Close } from '@mui/icons-material';
 import Link from 'next/link';
 // import logo from '@/components/logo/zottr_logo_large.svg'
@@ -11,8 +9,6 @@ import Link from 'next/link';
 
 const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false);
-  const { breakpoints } = useTheme();
-  const matchMobileView = useMediaQuery(breakpoints.down('md'));
 
   return (
     <Box
@@ -32,7 +28,7 @@ const Header: FC = () => {
           alignItems: 'center',
           justifyContent: 'center',
           py: 2,
-          px: matchMobileView ? 2 : 0, // no horizontal padding on desktop
+          px: { xs: 2, md: 0 },
         }}
       >
         <Link href="/" passHref>
@@ -44,11 +40,15 @@ const Header: FC = () => {
               cursor: 'pointer',
             }}
           >
-            <img
+            <Box
+              component="img"
               src="/images/icons/zottr_logo_large.svg"
               alt="Logo"
-              height={matchMobileView ? 28 : 32}
-              style={{ marginLeft: matchMobileView ? 0 : 20 }}
+              sx={{
+                width: { xs: 122, md: 140 },
+                height: 'auto',
+                ml: { xs: 0, md: 2.5 },
+              }}
             />
           </Box>
         </Link>
@@ -72,22 +72,20 @@ const Header: FC = () => {
             alignItems: 'center',
             justifyContent: 'space-between',
             flexDirection: { xs: 'column', md: 'row' },
-
             transition: (theme) => theme.transitions.create(['top']),
-            ...(matchMobileView && {
-              py: 6,
-              backgroundColor: 'background.paper',
-              zIndex: 'appBar',
-              position: 'fixed',
-              height: { xs: '100vh', md: 'auto' },
-              top: visibleMenu ? 0 : '-120vh',
-              left: 0,
-            }),
+            py: { xs: 6, md: 0 },
+            backgroundColor: 'background.paper',
+            zIndex: 'appBar',
+            position: { xs: 'fixed', md: 'static' },
+            height: { xs: '100vh', md: 'auto' },
+            top: { xs: visibleMenu ? 0 : '-120vh', md: 'auto' },
+            left: { xs: 0, md: 'auto' },
           }}
         >
-          {visibleMenu && matchMobileView && (
+          {visibleMenu && (
             <IconButton
               sx={{
+                display: { xs: 'inline-flex', md: 'none' },
                 position: 'fixed',
                 top: 10,
                 right: 14,
