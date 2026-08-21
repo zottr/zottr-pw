@@ -47,7 +47,7 @@ export default function AboutUs() {
             mb: 2,
           }}
         >
-          About Zottr
+          About Us
         </Typography>
 
         <Typography
@@ -55,13 +55,14 @@ export default function AboutUs() {
             mx: 'auto',
             maxWidth: 760,
             color: 'grey.700',
-            fontSize: { xs: 15, md: 18 },
+            fontSize: { xs: 18, md: 18 },
             lineHeight: 1.8,
           }}
         >
-          Zottr helps modern sellers build a professional online store, manage
-          orders with ease, and grow their business across channels like
-          WhatsApp and Instagram without depending on complex tools.
+          We want to make e-commerce simpler for social sellers without locking
+          them into closed platforms, hidden fees, or algorithm-driven
+          visibility. Zottr brings the tools they need to build, market, sell
+          and grow their business together in one place.
         </Typography>
       </Box>
 
@@ -73,10 +74,9 @@ export default function AboutUs() {
             lineHeight: 1.9,
           }}
         >
-          Founded by <strong>Rohit Saxena</strong> and{' '}
-          <strong>Shilpi Jain</strong>, Zottr is shaped by more than a decade of
-          hands-on software development experience across product-led technology
-          companies.
+          Founded by <strong>Rohit</strong> and <strong>Shilpi</strong>, Zottr
+          is shaped by more than a decade of hands-on software development
+          experience across product-led technology companies.
         </Typography>
 
         <Typography
@@ -149,8 +149,7 @@ export default function AboutUs() {
             mb: 4,
           }}
         >
-          Building practical commerce tools for the next generation of digital
-          sellers.
+          Building E-commerce tools for the next generation of social sellers.
         </Typography>
 
         <Box

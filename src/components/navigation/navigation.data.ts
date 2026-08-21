@@ -2,7 +2,7 @@ import type { Navigation } from '@/interfaces/navigation';
 
 export const navigations: Navigation[] = [
   {
-    label: 'About',
+    label: 'Home',
     path: 'Hero', // '/',
   },
   {

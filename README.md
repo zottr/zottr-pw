@@ -1,16 +1,33 @@
 <h1 align="center">
-  <a href="https://zottr.com">
-    Zottr — Public/Marketing Website
+  <a href="https://github.com/smartCoDev0629/coursespace-landing-page-react">
+  Coursespace - React Online Course Landing Page
   </a>
   <br />
 </h1>
 
-**Zottr** is a commerce platform built for modern social sellers, helping businesses create an online storefront, showcase products, accept orders, and build a recognizable brand across their social channels.
+![screenshot](public/images/image_processing20220419-31825-1yzr3x9.png)
 
-This repository contains the source code for the **public-facing Zottr website**, including its landing pages, product and feature sections, seller-focused messaging, and other publicly accessible content.
+**Coursespace** is a free landing page template built on top of Material UI and fully coded in **React**.
+Simple & light is designed to provide all the basic components using the `sx` prop for a developer need to create landing page for Online Course product.
 
-The website introduces Zottr's core capabilities and provides visitors with an overview of the platform and its tools for selling online.
+## Live Demo
 
-## About Zottr
+Take a look the live demo here 👉 [https://coursespace.vercel.app/](https://coursespace.vercel.app/)
 
-Zottr gives sellers the tools to build and manage their online presence without requiring them to build an ecommerce website from scratch. Sellers can create their own storefront, add products, manage orders, and connect their social selling activities with their online store.
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+Thanks to <a href="https://github.com/smartCoDev0629">Kevin Inoue</a> for sharing this freebie!
