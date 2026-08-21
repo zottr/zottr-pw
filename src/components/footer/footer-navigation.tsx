@@ -76,7 +76,7 @@ const FooterNavigation: FC = () => {
             display: 'flex',
             alignItems: { xs: 'flex-start', md: 'center' },
             justifyContent: { xs: 'flex-start', md: 'center' },
-            px: { xs: 2 },
+            px: { xs: 2, md: 0 },
           }}
         >
           <FooterSectionTitle title="Links" />
