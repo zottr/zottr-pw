@@ -55,7 +55,7 @@ export default function AboutUs() {
             mx: 'auto',
             maxWidth: 760,
             color: 'grey.700',
-            fontSize: { xs: 18, md: 18 },
+            fontSize: { xs: 16, md: 16 },
             lineHeight: 1.8,
           }}
         >
@@ -69,7 +69,7 @@ export default function AboutUs() {
       <Box sx={{ display: 'grid', gap: 2.5, mb: 2 }}>
         <Typography
           sx={{
-            color: 'grey.700',
+            color: 'grey.900',
             fontSize: { xs: 15, md: 17 },
             lineHeight: 1.9,
           }}
@@ -81,7 +81,7 @@ export default function AboutUs() {
 
         <Typography
           sx={{
-            color: 'grey.700',
+            color: 'grey.900',
             fontSize: { xs: 15, md: 17 },
             lineHeight: 1.9,
           }}
@@ -95,7 +95,7 @@ export default function AboutUs() {
 
         <Typography
           sx={{
-            color: 'grey.700',
+            color: 'grey.900',
             fontSize: { xs: 15, md: 17 },
             lineHeight: 1.9,
           }}
@@ -109,7 +109,7 @@ export default function AboutUs() {
 
         <Typography
           sx={{
-            color: 'grey.700',
+            color: 'grey.900',
             fontSize: { xs: 15, md: 17 },
             lineHeight: 1.9,
           }}
