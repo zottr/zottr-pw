@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://zottr.com">
-    Zottr — Public Website
+    Zottr — Public/Marketing Website
   </a>
   <br />
 </h1>
